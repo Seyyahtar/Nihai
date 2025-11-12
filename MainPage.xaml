@@ -106,6 +106,9 @@
                                TextColor="#1F2559"
                                HorizontalOptions="Start" />
                     </VerticalStackLayout>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCaseCardTapped" />
+                    </Border.GestureRecognizers>
                 </Border>
 
                 <Border Grid.Row="1"
@@ -185,7 +188,8 @@
 
             <Border BackgroundColor="White"
                     StrokeThickness="0"
-                    Padding="22">
+                    Padding="24,24"
+                    HorizontalOptions="Center">
                 <Border.Shadow>
                     <Shadow Brush="#1A9DA7F2"
                             Offset="0,10"
@@ -195,17 +199,20 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="30" />
                 </Border.StrokeShape>
-                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="18" VerticalOptions="Center">
-                    <Border HeightRequest="64"
-                            WidthRequest="64"
+                <VerticalStackLayout Spacing="18"
+                                      HorizontalOptions="Center"
+                                      VerticalOptions="Center">
+                    <Border HeightRequest="72"
+                            WidthRequest="72"
                             BackgroundColor="#F0F1FF"
-                            StrokeThickness="0">
+                            StrokeThickness="0"
+                            HorizontalOptions="Center">
                         <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="32" />
+                            <RoundRectangle CornerRadius="36" />
                         </Border.StrokeShape>
                         <Image Source="settings_icon.svg"
-                               WidthRequest="30"
-                               HeightRequest="30"
+                               WidthRequest="32"
+                               HeightRequest="32"
                                HorizontalOptions="Center"
                                VerticalOptions="Center" />
                     </Border>
@@ -213,8 +220,9 @@
                            FontSize="18"
                            FontAttributes="Bold"
                            TextColor="#1F2559"
-                           VerticalTextAlignment="Center" />
-                </Grid>
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
             </Border>
         </VerticalStackLayout>
     </ScrollView>

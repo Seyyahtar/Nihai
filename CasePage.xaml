@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Nihai.CasePage"
+             BackgroundColor="#F3F6FA"
+             Title="Vaka">
+    <Grid RowDefinitions="Auto,*">
+        <Grid BackgroundColor="#0AA34C"
+              Padding="24,60,24,24">
+            <Label Text="Vaka"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center" />
+        </Grid>
+
+        <Border Grid.Row="1"
+                StrokeThickness="0"
+                BackgroundColor="White"
+                Margin="0,-24,0,0"
+                Stroke="Transparent">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="32,32,0,0" />
+            </Border.StrokeShape>
+            <Border.Shadow>
+                <Shadow Brush="#201F2559"
+                        Offset="0,12"
+                        Radius="24"
+                        Opacity="0.12" />
+            </Border.Shadow>
+            <ScrollView>
+                <VerticalStackLayout Padding="24,32,24,40" Spacing="24">
+                    <VerticalStackLayout Spacing="8">
+                        <Label FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#1F2559">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Tarih" />
+                                    <Span Text=" *" TextColor="#E53935" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Border Stroke="#D7DFEB"
+                                StrokeThickness="1"
+                                BackgroundColor="#F9FBFF"
+                                Padding="12,10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16" />
+                            </Border.StrokeShape>
+                            <DatePicker TextColor="#1F2559"
+                                        FontSize="16"
+                                        HorizontalOptions="Fill"
+                                        VerticalOptions="Center"
+                                        Format="dd.MM.yyyy"
+                                        Date="2025-11-05" />
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="8">
+                        <Label FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#1F2559">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Hastane Adı" />
+                                    <Span Text=" *" TextColor="#E53935" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Border Stroke="#D7DFEB"
+                                StrokeThickness="1"
+                                BackgroundColor="#F9FBFF"
+                                Padding="12,14">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16" />
+                            </Border.StrokeShape>
+                            <Entry Placeholder="Hastane adı"
+                                   FontSize="16"
+                                   TextColor="#1F2559"
+                                   PlaceholderColor="#95A1BA" />
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="8">
+                        <Label FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#1F2559">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Doktor Adı" />
+                                    <Span Text=" *" TextColor="#E53935" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Border Stroke="#D7DFEB"
+                                StrokeThickness="1"
+                                BackgroundColor="#F9FBFF"
+                                Padding="12,14">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16" />
+                            </Border.StrokeShape>
+                            <Entry Placeholder="Doktor adı"
+                                   FontSize="16"
+                                   TextColor="#1F2559"
+                                   PlaceholderColor="#95A1BA" />
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="8">
+                        <Label FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#1F2559">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Hasta Adı" />
+                                    <Span Text=" *" TextColor="#E53935" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Border Stroke="#D7DFEB"
+                                StrokeThickness="1"
+                                BackgroundColor="#F9FBFF"
+                                Padding="12,14">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16" />
+                            </Border.StrokeShape>
+                            <Entry Placeholder="Hasta adı"
+                                   FontSize="16"
+                                   TextColor="#1F2559"
+                                   PlaceholderColor="#95A1BA" />
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="8">
+                        <Label FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#1F2559">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Not" />
+                                    <Span Text=" (opsiyonel)" TextColor="#7280A7" FontAttributes="None" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Border Stroke="#D7DFEB"
+                                StrokeThickness="1"
+                                BackgroundColor="#F9FBFF"
+                                Padding="12">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="20" />
+                            </Border.StrokeShape>
+                            <Editor Placeholder="Not"
+                                    FontSize="16"
+                                    HeightRequest="120"
+                                    TextColor="#1F2559"
+                                    PlaceholderColor="#95A1BA" />
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout HorizontalOptions="Fill" Spacing="16" VerticalOptions="Center">
+                            <Label FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="#1F2559"
+                                   VerticalOptions="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Kullanılan Malzemeler" />
+                                        <Span Text=" *" TextColor="#E53935" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Button Text="+ Ekle"
+                                    Padding="14,10"
+                                    FontSize="14"
+                                    CornerRadius="18"
+                                    BackgroundColor="#0AA34C"
+                                    TextColor="White"
+                                    HorizontalOptions="EndAndExpand" />
+                        </HorizontalStackLayout>
+                        <Label Text="Malzeme eklemek için + butonuna tıklayın"
+                               FontSize="14"
+                               TextColor="#95A1BA" />
+                    </VerticalStackLayout>
+
+                    <Button Text="Vakayı Kaydet"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            TextColor="White"
+                            BackgroundColor="#1F2559"
+                            CornerRadius="24"
+                            HeightRequest="56"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="End" />
+                </VerticalStackLayout>
+            </ScrollView>
+        </Border>
+    </Grid>
+</ContentPage>
